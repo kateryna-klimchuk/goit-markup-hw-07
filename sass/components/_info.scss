@@ -2,10 +2,8 @@
     padding-top: 94px;
 }
 .info-list {
-    display: flex;
+    @extend %flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 .info-list__head {
     font-weight: 700;

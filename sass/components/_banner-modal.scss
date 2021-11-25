@@ -33,8 +33,6 @@
     transition: transform 250ms var(--transition-timing);
     padding: 40px;
 
-
-
     
     background-color: var(--modal-window-color);
 }
@@ -57,9 +55,10 @@
 
     fill: #000;
     transition: fill 250ms var(--transition-timing);
-}
 
-.modal__btn:hover,
-.modal__btn:focus {
+    &:hover,
+    &:focus {
     fill: var(--blue-accent);
 }
+}
+

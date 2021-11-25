@@ -1,50 +1,44 @@
 .header {
     border-bottom: 1px solid #ECECEC;
 }
+
+.main-nav {
+    display: flex;
+    align-items: baseline;
+}
+
 .header-nav,
 .header-address {
     margin: 0;
     padding: 0;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    
+    list-style: none;
 }
 
-.main-nav {
+.nav {
     display: flex;
+    margin: 0;
+    justify-content: start;
     align-items: center;
-}
-
-.logo {
-    font-family: Raleway, sans-serif;
-    text-decoration: none;
-    font-size: 26px;
-    line-height: 1.19;
-    margin-bottom: 0;
-}
-.header-logo {
-    color: #000000;
-}
-
-.logo__accent {
-    color: var(--blue-accent);
-
-}
-
-.nav, .header-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 93px;
 }
+
 
 .header-nav__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-logo {
-    margin: 0;
-}
+
 .header-nav__link {
     display: block;
     padding-top: 32px;
@@ -62,9 +56,10 @@
     margin-left: auto;
 }
 
-.header-address__item + .item {
+.header-address__item:nth-child(n + 2) {
     margin-left: 50px;
 }
+
 .header-address__link {
     color: var(--secondary-text-color);
     text-decoration: none;
@@ -72,14 +67,6 @@
     align-items: center;
 }
 
-.header-nav, .header-address {
-    letter-spacing: 0.02em;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    
-    list-style: none;
-}
 
 .header-nav__link,
 .header-address__link {
@@ -91,30 +78,29 @@
 .header-address__link:hover,.header-address__link:focus {
     color: var(--blue-accent);
 }
-.icon-mail {
+
+
+.header-address__icon {
     margin-right: 10px;
-    width: 16px;
-    height: 12px;
     fill: currentColor;
     transition: fill 250ms var(--transition-timing);
+
+    &:hover,
+    &:focus {
+        fill: var(--blue-accent);
+    }
 }
 
-.icon-mail:hover,
-.icon-mail:focus {
-    fill: var(--blue-accent);
+.icon-mail {
+    width: 16px;
+    height: 12px;
 }
 
 .icon-phone {
-    margin-right: 10px;
     width: 10px;
     height: 16px;
-    fill: currentColor;
-    transition: fill 250ms var(--transition-timing);
 }
-.icon-phone:hover,
-.icon-phone:focus {
-    fill: var(--blue-accent);
-}
+
 
 .header-nav__item {
     position: relative;
