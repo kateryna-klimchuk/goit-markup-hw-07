@@ -1,8 +1,6 @@
 .portfolio-nav {
-    display: flex;
-    margin-top: 0;
+    @extend %flex;
     margin-bottom: 34px;
-    padding: 0;
     justify-content: center;
 }
 
@@ -15,24 +13,26 @@
 
 
 .portfolio-nav__button {
+    @extend %button;
     background-color: #F5F4FA;
-    cursor: pointer;
     font-weight: 500;
-    font-size: 16px;
     line-height: 1.62;
     text-align: center;
-    border-radius: 4px;
-    border: transparent;
     padding: 6px 22px;
 
-    transition: color 250ms var(--transition-timing),
-    background-color 250ms var(--transition-timing),
-    box-shadow 250ms var(--transition-timing);
+    transition: color 250ms $transition-timing,
+    background-color 250ms $transition-timing,
+    box-shadow 250ms $transition-timing;
 
-}
-.portfolio-nav__button:hover,
-.portfolio-nav__button:focus {
-    color: var(--main-white);
-    background-color: var(--blue-accent);
+    &:hover {
+    color: $main-white;
+    background-color: $blue-accent;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    &:focus {
+    color: $main-white;
+    background-color: $blue-accent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
 }

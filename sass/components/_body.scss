@@ -1,7 +1,7 @@
 body {
-    color: var(--primery-text-color);
-    background-color: var(--main-white);
-    font-family: Roboto, sans-serif;
+    color: $primery-text-color;
+    background-color: $main-white;
+    font-family: $main-font-family;
     letter-spacing: 0.03em;
     max-width: 1600px;
     margin-left: auto;

@@ -44,12 +44,14 @@
     padding-top: 32px;
     padding-bottom: 32px;
 
-    color: var(--primery-text-color);
+    color: $primery-text-color;
     text-decoration: none;
+
+    &--current {
+    color: $blue-accent;
 }
-.header-nav__link--current {
-    color: var(--blue-accent);
 }
+
 
 .header-address {
     display: flex;
@@ -61,33 +63,48 @@
 }
 
 .header-address__link {
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
 
-.header-nav__link,
-.header-address__link {
-    transition: color 250ms var(--transition-timing);
+.header-nav__link {
+    transition: color 250ms $transition-timing;
+
+    &:hover {
+        color: $blue-accent;
+    } 
+    &:focus {
+        color: $blue-accent;
+    }
+
 }
 
 
-.header-nav__link:hover, .header-nav__link:focus,
-.header-address__link:hover,.header-address__link:focus {
-    color: var(--blue-accent);
+
+.header-address__link {
+    transition: color 250ms $transition-timing;
+
+    &:hover {
+        color: $blue-accent;
+    } 
+    &:focus {
+        color: $blue-accent;
+    }
+    
 }
 
 
 .header-address__icon {
     margin-right: 10px;
     fill: currentColor;
-    transition: fill 250ms var(--transition-timing);
+    transition: fill 250ms $transition-timing;
 
     &:hover,
     &:focus {
-        fill: var(--blue-accent);
+        fill: $blue-accent;
     }
 }
 
@@ -115,5 +132,5 @@
     height: 4px;
     border-radius: 2px;
     
-    background-color: var(--blue-accent);
+    background-color: $blue-accent;
 }

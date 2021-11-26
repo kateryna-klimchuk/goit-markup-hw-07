@@ -14,9 +14,7 @@
     margin: 0;
 }
 .work-list {
-    display: flex;
-    margin: 0;
-    padding: 0;
+    @extend %flex;
 }
 .work-list__item:not(:last-child) {
     margin-right: 30px;

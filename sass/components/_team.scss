@@ -9,7 +9,7 @@
     margin: 0;
     border-radius: 0px 0px 4px 4px;
 
-    background: var(--main-white);
+    background: $main-white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -23,16 +23,14 @@
 
 }
 .team-list__position {
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     margin-top: 10px;
 }
 .team-list {
-    display: flex;
-    margin: 0;
-    padding: 0;
+    @extend %flex;
     height: 428px;
 }
 .team-list__item:not(:last-child) {
@@ -41,16 +39,14 @@
 
 
 .team-links {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    margin: 16px 32px 30px;
+    @extend %flex;
     list-style: none;
-
     padding-right: 0px;
     border: 1px solid transparent;
     width: 206px;
     height: 44px;
+    margin: 16px 32px 30px;
+
 }
 .team-links__link {
     display: block;
@@ -58,25 +54,28 @@
     padding: 12px;
     width: 44px;
     height: 44px;
-    color: var(--client-logo-normal);
+    color: $client-logo-normal;
 
-    transition: background-color 250ms var(--transition-timing),
-    border-radius 250ms var(--transition-timing),
-    color 250ms var(--transition-timing);
+    transition: background-color 250ms $transition-timing,
+    border-radius 250ms $transition-timing,
+    color 250ms $transition-timing;
 
+    &:hover {
+    background-color: $client-logo-accent;
+    border-radius: 50%;
+    color: $main-white;
+    }
+
+    &:focus {
+    background-color: $client-logo-accent;
+    border-radius: 50%;
+    color: $main-white;
+    }
 
 }
 
 .team-links__social {
     fill: currentColor;
-}
-
-
-.team-links__link:hover,
-.team-links__link:focus {
-    background-color: var(--client-logo-accent);
-    border-radius: 50%;
-    color: var(--main-white);
 }
 
 .team-links__item:nth-child(-n + 3) {

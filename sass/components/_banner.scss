@@ -1,5 +1,5 @@
 .banner {
-    background-color: var(--main-background-color);
+    background-color: $main-background-color;
     letter-spacing: 0.06em;
     text-align: center;
     padding: 200px 0;
@@ -18,7 +18,7 @@
 
 }
 .banner__text {
-    color: var(--main-white);
+    color: $main-white;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -29,15 +29,8 @@
 }
 
 .banner__button {
-    color: var(--main-white);
-    background-color: var(--blue-accent);
-    letter-spacing: 0.06em;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    cursor: pointer;
-    margin-top: 30px;
-    border-radius: 4px;
+    @extend %button;
+    @extend %btn-expanded;
     padding: 10px 32px;
-    border: transparent;
 }
+

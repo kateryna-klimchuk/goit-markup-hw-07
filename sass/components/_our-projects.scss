@@ -1,9 +1,7 @@
 .project {
+    @extend %flex;
     list-style: none;
     text-decoration: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
     flex-wrap: wrap;
 }
 
@@ -18,7 +16,7 @@
     padding-top: 20px;
 }
 .project__product {
-    color: var(--secondary-text-color);
+    color: $secondary-text-color;
     font-size: 16px;
     line-height: 1.87;
     margin: 0;
@@ -44,15 +42,17 @@
 .project__link {
     display: block;
     text-decoration: none;
-    color: var(--primery-text-color);
+    color: $primery-text-color;
 
-    transition: box-shadow 250ms var(--transition-timing),
+    transition: box-shadow 250ms $transition-timing;
 
-}
-
-.project__link:hover,
-.project__link:focus {
+    &:hover {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    &:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
 }
 
 
@@ -76,20 +76,27 @@
 
     font-size: 18px;
     line-height: 1.56;
-    color: var(--main-white);
-    background-color: var(--portfolio-cards-overlay);
-
+    color: $main-white;
+    background-color: $portfolio-cards-overlay;
 
     opacity: 0;
 
     transform: translateY(100%);
-    transition: opacity 250ms var(--transition-timing),
-    transform 250ms var(--transition-timing);
+    transition: opacity 250ms $transition-timing,
+    transform 250ms $transition-timing;
+
+    .project__link:hover & {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    .project__link:focus & {
+    opacity: 1;
+    transform: translateY(0);
+    }
 }
 
-.project__link:hover .project__text,
 .project__link:hover .project__thumb::before,
-.project__link:focus .project__text,
 .project__link:focus .project__thumb::before {
     opacity: 1;
     transform: translateY(0);
