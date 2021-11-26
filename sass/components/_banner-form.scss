@@ -1,5 +1,3 @@
-
-
 .modal-form {
     @extend %flex;
     width: 100%;
@@ -19,13 +17,6 @@
     margin-bottom: 12px;
 }
 
-.modal-list {
-    @extend %flex;
-    list-style: none;    
-    text-align: start;
-    flex-direction: column;
-    position: relative;
-}
 
 
 .modal-list__label {
@@ -48,6 +39,8 @@
     outline: none;
     border: 1px solid $blue-accent;
 }
+    &:focus + .modal-list__icon {
+    fill: $blue-accent;
 }
 
 .modal-list [placeholder] {
@@ -74,10 +67,16 @@
 
 }
 
+.modal-list {
+    @extend %flex;
+    list-style: none;    
+    text-align: start;
+    flex-direction: column;
+    position: relative;
+}
 
 
-.modal-list:focus-within > .modal-list__icon {
-    fill: var(--blue-accent);
+.modal-list__input
 }
 
 .modal-list__textarea {
