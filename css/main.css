@@ -23,7 +23,7 @@ img {
   width: 1px;
 }
 
-.modal-form, .modal-list, .info-list, .work-list, .team-list, .team-links, .client-list, .footer-nav, .footer-social__list, .footer-social__link, .portfolio-nav, .project {
+.modal-form, .modal-list, .info-list, .our-work-list, .team-list, .team-links, .client-list, .footer-nav, .footer-social__list, .footer-social__link, .portfolio-nav, .project {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -385,6 +385,10 @@ body {
   border: 1px solid #2196F3;
 }
 
+.modal-list__input:focus + .modal-list__icon {
+  fill: #2196F3;
+}
+
 .modal-list [placeholder] {
   font-size: 12px;
   line-height: 1.16;
@@ -417,10 +421,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-}
-
-.modal-list__input:focus + .modal-list__icon {
-  fill: #2196F3;
 }
 
 .modal-list__textarea {
@@ -571,20 +571,20 @@ body {
   margin-bottom: 50px;
 }
 
-.work-list__item {
+.our-work-list__item {
   list-style: none;
   margin: 0;
 }
 
-.work-list__item:not(:last-child) {
+.our-work-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.work-list__thumb {
+.our-work-list__thumb {
   position: relative;
 }
 
-.work-list__cover {
+.our-work-list__cover {
   position: absolute;
   width: 100%;
   bottom: 0;

@@ -9,13 +9,13 @@
     margin: 0;
     margin-bottom: 50px;
 }
-.work-list__item {
+.our-work-list__item {
     list-style: none;
     margin: 0;
 }
-.work-list {
+.our-work-list {
     @extend %flex;
 }
-.work-list__item:not(:last-child) {
+.our-work-list__item:not(:last-child) {
     margin-right: 30px;
 }

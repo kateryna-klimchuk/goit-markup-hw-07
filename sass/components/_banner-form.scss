@@ -42,6 +42,7 @@
     &:focus + .modal-list__icon {
     fill: $blue-accent;
 }
+}
 
 .modal-list [placeholder] {
     font-size: 12px;
@@ -76,8 +77,6 @@
 }
 
 
-.modal-list__input
-}
 
 .modal-list__textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
